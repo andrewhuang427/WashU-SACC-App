@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		91734CE9273EF4E20084BA0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734CE8273EF4E20084BA0B /* AppDelegate.swift */; };
 		91734CEB273EF4E20084BA0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734CEA273EF4E20084BA0B /* SceneDelegate.swift */; };
-		91734CED273EF4E20084BA0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734CEC273EF4E20084BA0B /* ViewController.swift */; };
 		91734CF0273EF4E20084BA0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91734CEE273EF4E20084BA0B /* Main.storyboard */; };
 		91734CF2273EF4E50084BA0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91734CF1273EF4E50084BA0B /* Assets.xcassets */; };
 		91734CF5273EF4E50084BA0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91734CF3273EF4E50084BA0B /* LaunchScreen.storyboard */; };
 		91734D00273EF4E50084BA0B /* washu_sacc_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734CFF273EF4E50084BA0B /* washu_sacc_appTests.swift */; };
 		91734D0B273EF4E50084BA0B /* washu_sacc_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734D0A273EF4E50084BA0B /* washu_sacc_appUITests.swift */; };
-		D5922A832742E3DA0097133E /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5922A822742E3DA0097133E /* PageCollectionViewCell.swift */; };
 		D5922A852742E9A80097133E /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5922A842742E9A80097133E /* EventViewController.swift */; };
 		D5922A872742E9B90097133E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5922A862742E9B90097133E /* NewsViewController.swift */; };
 		D5922A892742E9D10097133E /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5922A882742E9D10097133E /* ResourcesViewController.swift */; };
@@ -43,7 +41,6 @@
 		91734CE5273EF4E20084BA0B /* washu-sacc-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "washu-sacc-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91734CE8273EF4E20084BA0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91734CEA273EF4E20084BA0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91734CEC273EF4E20084BA0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91734CEF273EF4E20084BA0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91734CF1273EF4E50084BA0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91734CF4273EF4E50084BA0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +51,6 @@
 		91734D06273EF4E50084BA0B /* washu-sacc-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "washu-sacc-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91734D0A273EF4E50084BA0B /* washu_sacc_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = washu_sacc_appUITests.swift; sourceTree = "<group>"; };
 		91734D0C273EF4E50084BA0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5922A822742E3DA0097133E /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 		D5922A842742E9A80097133E /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		D5922A862742E9B90097133E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		D5922A882742E9D10097133E /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
@@ -111,8 +107,6 @@
 			children = (
 				91734CE8273EF4E20084BA0B /* AppDelegate.swift */,
 				91734CEA273EF4E20084BA0B /* SceneDelegate.swift */,
-				91734CEC273EF4E20084BA0B /* ViewController.swift */,
-				D5922A822742E3DA0097133E /* PageCollectionViewCell.swift */,
 				91734CEE273EF4E20084BA0B /* Main.storyboard */,
 				D5922A842742E9A80097133E /* EventViewController.swift */,
 				D5922A862742E9B90097133E /* NewsViewController.swift */,
@@ -275,12 +269,10 @@
 			files = (
 				D5922A852742E9A80097133E /* EventViewController.swift in Sources */,
 				D5922A8B2742E9DD0097133E /* TeamViewController.swift in Sources */,
-				91734CED273EF4E20084BA0B /* ViewController.swift in Sources */,
 				91734CE9273EF4E20084BA0B /* AppDelegate.swift in Sources */,
 				D5922A892742E9D10097133E /* ResourcesViewController.swift in Sources */,
 				D5922A872742E9B90097133E /* NewsViewController.swift in Sources */,
 				91734CEB273EF4E20084BA0B /* SceneDelegate.swift in Sources */,
-				D5922A832742E3DA0097133E /* PageCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
