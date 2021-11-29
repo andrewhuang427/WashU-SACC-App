@@ -8,11 +8,39 @@
 import UIKit
 
 class NewsViewController: UIViewController {
+    
+    var theNews: [News] = []
+    
+//    struct APIResultsNews: Decodable{
+//        var results: [News]
+//    }
+    
+    struct News: Decodable{
+        var title: String?
+        var link: String?
+        var team_abbreviation: String?
+        var image_url: String?
+        var date_posted: String?
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("running")
+        fetchData()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func fetchData(){
+        let url = URL(string: "https://washu-sacc-app-api.herokuapp.com/news")
+        let data = try! Data(contentsOf: url!)
+        let response = try! JSONDecoder().decode([News].self, from: data)
+//        print(response)
+        theNews = response
+        for j in theNews{
+            print(j.title ?? "No News")
+        }
     }
     
 

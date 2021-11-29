@@ -82,7 +82,7 @@
         <!--News-->
         <scene sceneID="YUB-SQ-B5S">
             <objects>
-                <viewController id="1pO-DS-WLa" sceneMemberID="viewController">
+                <viewController id="1pO-DS-WLa" customClass="NewsViewController" customModule="washu_sacc_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tno-j0-n95">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +101,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="iPp-pd-MVD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2s1-Uz-Po8">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -117,10 +118,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="events" width="30" height="30"/>
-        <image name="news" width="30" height="30"/>
-        <image name="resources" width="30" height="30"/>
-        <image name="team" width="30" height="30"/>
+        <image name="events" width="25" height="25"/>
+        <image name="news" width="25" height="25"/>
+        <image name="resources" width="25" height="25"/>
+        <image name="team" width="27" height="27"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
