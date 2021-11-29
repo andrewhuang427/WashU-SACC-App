@@ -18,12 +18,12 @@
                         <viewLayoutGuide key="safeArea" id="Wcv-id-876"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Events" id="Ii5-gC-MYY"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="events" selectedImage="events" id="Ii5-gC-MYY"/>
                     <navigationItem key="navigationItem" id="q8g-3X-zHY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEq-bO-Y6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3528" y="269"/>
+            <point key="canvasLocation" x="-3565" y="269"/>
         </scene>
         <!--Resources-->
         <scene sceneID="DFF-kd-tbx">
@@ -53,7 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="RAq-OI-hKf"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Resources" id="Q2N-2Q-n7m"/>
+                    <tabBarItem key="tabBarItem" title="Resources" image="resources" selectedImage="resources" id="Q2N-2Q-n7m"/>
                     <connections>
                         <outlet property="header" destination="Es5-xg-k0I" id="GJz-3S-Je4"/>
                         <outlet property="tableview" destination="M8Z-Wd-9ez" id="Dsf-52-VhU"/>
@@ -73,7 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="7HH-a5-J26"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Teams" id="fXl-Ee-I8M"/>
+                    <tabBarItem key="tabBarItem" title="Teams" image="team" selectedImage="team" id="fXl-Ee-I8M"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zD4-5O-cQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +89,7 @@
                         <viewLayoutGuide key="safeArea" id="WRx-Lo-V5X"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" id="R4T-j9-4Ox"/>
+                    <tabBarItem key="tabBarItem" title="News" image="news" selectedImage="news" id="R4T-j9-4Ox"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9DJ-oQ-C3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +117,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="events" width="30" height="30"/>
+        <image name="news" width="30" height="30"/>
+        <image name="resources" width="30" height="30"/>
+        <image name="team" width="30" height="30"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

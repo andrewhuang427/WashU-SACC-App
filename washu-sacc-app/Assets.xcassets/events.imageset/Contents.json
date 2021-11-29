@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "events.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "fc3968fc479135343c50cdf757ee71fb.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
