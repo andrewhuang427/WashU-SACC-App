@@ -3,14 +3,20 @@
 //  washu-sacc-app
 //
 //  Created by Joe Georger on 11/15/21.
+// https://www.youtube.com/watch?v=TZ3-iQ462Q8
 //
 
 import UIKit
+import SafariServices
 
-class NewsViewController: UIViewController {
+class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var theNews: [News] = []
     
+    @IBOutlet weak var newsTable: UITableView!
+    
+    var news: [News] = []
+    
+    private var showSafari: Bool = false
     
     struct News: Decodable{
         var title: String?
@@ -24,9 +30,32 @@ class NewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("running")
+        newsTable.dataSource = self
+        newsTable.delegate = self
         fetchData()
-
+        newsTable.register(UITableViewCell.self, forCellReuseIdentifier: "newsCell")
         // Do any additional setup after loading the view.
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return news.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let c = UITableViewCell(style: .default, reuseIdentifier: "newsCell")
+        c.textLabel!.text = news[indexPath.row].title
+        return c
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        print(news[indexPath.row].link!)
+        if let url = URL(string: news[indexPath.row].link ?? "https://washubears.com/landing/headlines-featured") {
+                let config = SFSafariViewController.Configuration()
+                config.entersReaderIfAvailable = true
+
+                let vc = SFSafariViewController(url: url, configuration: config)
+                present(vc, animated: true)
+            }
     }
     
     func fetchData(){
@@ -34,13 +63,14 @@ class NewsViewController: UIViewController {
         let data = try! Data(contentsOf: url!)
         let response = try! JSONDecoder().decode([News].self, from: data)
 //        print(response)
-        theNews = Array(response[0 ..< 30])
-        for j in theNews{
+        news = Array(response[0 ..< 30])
+        for j in news{
             print(j.title ?? "No News")
             
         }
-        print(theNews.count)
+        print(news.count)
     }
+    
     
 
     /*
