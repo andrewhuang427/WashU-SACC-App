@@ -1,8 +1,0 @@
-Target dependency graph (4 targets)
-FSCalendar in Pods
-Pods-washu-sacc-app in Pods, depends on:
-FSCalendar in Pods (explicit)
-Pods-washu-sacc-app-washu-sacc-appUITests in Pods, depends on:
-FSCalendar in Pods (explicit)
-Pods-washu-sacc-appTests in Pods, depends on:
-Pods-washu-sacc-app in Pods (explicit)
