@@ -44,6 +44,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let c = UITableViewCell(style: .default, reuseIdentifier: "newsCell")
         c.textLabel!.text = news[indexPath.row].title
+        c.textLabel?.numberOfLines = 0
         return c
     }
     
