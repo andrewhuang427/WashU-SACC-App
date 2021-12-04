@@ -23,40 +23,28 @@
                                     <constraint firstAttribute="height" constant="350" id="C96-Ra-W4L"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXx-Zt-lDw">
-                                <rect key="frame" x="39" y="394" width="313" height="85"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEK-VO-bSX">
-                                        <rect key="frame" x="116.66666666666666" y="32" width="80" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-9T-Tsk">
+                                <rect key="frame" x="0.0" y="394" width="390" height="367"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="BEK-VO-bSX" firstAttribute="centerX" secondItem="XXx-Zt-lDw" secondAttribute="centerX" id="631-5Q-k8N"/>
-                                    <constraint firstAttribute="height" constant="85" id="pCH-LR-Vq3"/>
-                                    <constraint firstItem="BEK-VO-bSX" firstAttribute="centerY" secondItem="XXx-Zt-lDw" secondAttribute="centerY" id="xUq-wu-OS1"/>
-                                </constraints>
-                            </view>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wcv-id-876"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XXx-Zt-lDw" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" constant="39" id="3xb-1X-eD5"/>
-                            <constraint firstItem="XXx-Zt-lDw" firstAttribute="top" secondItem="w8O-0Z-NmT" secondAttribute="bottom" id="Hi3-xn-gCv"/>
+                            <constraint firstItem="Wcv-id-876" firstAttribute="bottom" secondItem="5K5-9T-Tsk" secondAttribute="bottom" id="8h0-jG-tcL"/>
+                            <constraint firstItem="5K5-9T-Tsk" firstAttribute="top" secondItem="w8O-0Z-NmT" secondAttribute="bottom" id="AMI-zO-f8z"/>
+                            <constraint firstItem="5K5-9T-Tsk" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="B17-Yz-j1V"/>
                             <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="w8O-0Z-NmT" secondAttribute="trailing" id="TFM-MP-K0Z"/>
                             <constraint firstItem="w8O-0Z-NmT" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="UQp-Ot-gEx"/>
-                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="XXx-Zt-lDw" secondAttribute="trailing" constant="38" id="XM7-nD-zll"/>
                             <constraint firstItem="w8O-0Z-NmT" firstAttribute="top" secondItem="Wcv-id-876" secondAttribute="top" id="Ydt-NN-qxZ"/>
+                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="5K5-9T-Tsk" secondAttribute="trailing" id="YrQ-1G-ODc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" image="events" selectedImage="events" id="Ii5-gC-MYY"/>
                     <navigationItem key="navigationItem" id="q8g-3X-zHY"/>
                     <connections>
                         <outlet property="calendar" destination="w8O-0Z-NmT" id="ucw-7H-5Jf"/>
-                        <outlet property="eventTitle" destination="BEK-VO-bSX" id="79j-Wg-l4W"/>
+                        <outlet property="tableView" destination="5K5-9T-Tsk" id="MSR-HL-Xx7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEq-bO-Y6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

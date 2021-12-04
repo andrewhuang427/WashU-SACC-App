@@ -8,11 +8,10 @@
 import FSCalendar
 import UIKit
 
-class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
-
+class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var calendar: FSCalendar!
-    @IBOutlet weak var eventTitle: UILabel!
+    @IBOutlet weak var tableView: UITableView!
     
     struct Event: Decodable{
         var name: String?
@@ -23,6 +22,8 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
     
     var events: [Event] = []
     var dateToEvents: [String: [Event]] = [:]
+    
+    var todaysEvents: [Event] = []
 
     fileprivate lazy var formatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -34,6 +35,8 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
         super.viewDidLoad()
         calendar.dataSource = self
         calendar.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
         fetchEvents()
     }
     
@@ -58,10 +61,11 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         let dateString = formatter.string(from: date)
         if (dateToEvents[dateString] != nil){
-            eventTitle.text = dateToEvents[dateString]?[0].name ?? "Failed to unwrap optional"
+            todaysEvents = dateToEvents[dateString] ?? []
         } else {
-            eventTitle.text = "No Events Today"
+            todaysEvents = []
         }
+        tableView.reloadData()
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
@@ -72,4 +76,15 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
             return 0
         }
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        todaysEvents.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let c = UITableViewCell(style: .default, reuseIdentifier: "newsCell")
+        c.textLabel!.text = todaysEvents[indexPath.row].name
+        return c
+    }
+    
 }
