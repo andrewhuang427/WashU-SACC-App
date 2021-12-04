@@ -11,9 +11,6 @@ class NewsViewController: UIViewController {
     
     var theNews: [News] = []
     
-//    struct APIResultsNews: Decodable{
-//        var results: [News]
-//    }
     
     struct News: Decodable{
         var title: String?
@@ -37,10 +34,12 @@ class NewsViewController: UIViewController {
         let data = try! Data(contentsOf: url!)
         let response = try! JSONDecoder().decode([News].self, from: data)
 //        print(response)
-        theNews = response
+        theNews = Array(response[0 ..< 30])
         for j in theNews{
             print(j.title ?? "No News")
+            
         }
+        print(theNews.count)
     }
     
 
