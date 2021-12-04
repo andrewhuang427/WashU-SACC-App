@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/joegeorger/Desktop/428/WashU-SACC-App/washu-sacc-app/SFSafariViewWrapper.swift">
-   </FileRef>
-   <FileRef
       location = "group:washu-sacc-app.xcodeproj">
    </FileRef>
    <FileRef
