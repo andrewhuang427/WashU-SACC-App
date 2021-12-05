@@ -267,11 +267,11 @@
             <objects>
                 <viewController id="wvm-ke-jpP" customClass="TeamViewController" customModule="washu_sacc_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YZC-8a-0Ti">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cn3-zV-tb2">
-                                <rect key="frame" x="0.0" y="222" width="390" height="576"/>
+                                <rect key="frame" x="0.0" y="134" width="390" height="576"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myIndentifier" id="JqU-dJ-VTD">
@@ -288,11 +288,11 @@
                                 </prototypes>
                             </tableView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="washu-saac" translatesAutoresizingMaskIntoConstraints="NO" id="YMz-cj-3zd">
-                                <rect key="frame" x="0.0" y="88" width="390" height="103"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="103"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                             </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X9H-ty-2ob">
-                                <rect key="frame" x="0.0" y="191" width="390" height="32"/>
+                                <rect key="frame" x="0.0" y="103" width="390" height="32"/>
                                 <segments>
                                     <segment title="Mens"/>
                                     <segment title="Womens"/>
@@ -332,7 +332,7 @@
             <objects>
                 <viewController storyboardIdentifier="RosterVC" id="9Se-Ix-Xge" customClass="RosterViewController" customModule="washu_sacc_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aZA-9l-BCO">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aXz-M5-aUD">
@@ -371,7 +371,7 @@
             <objects>
                 <viewController storyboardIdentifier="PlayerVC" id="035-jg-mpZ" customClass="PlayerDetailViewController" customModule="washu_sacc_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="25P-wb-LCJ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WdS-4B-w9g">
@@ -420,7 +420,8 @@
             <objects>
                 <navigationController id="s3p-Jo-Nmx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Teams" image="team" selectedImage="team" id="uwG-Ji-yfu"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RW2-0n-Khs">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="RW2-0n-Khs">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
