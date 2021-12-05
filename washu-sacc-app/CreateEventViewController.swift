@@ -10,7 +10,7 @@ import UIKit
 class CreateEventViewController: UIViewController {
 
     
-    var dateString: String!
+    var dateString: String?
     @IBOutlet weak var eventTextLabel: UILabel!
     @IBOutlet weak var eventNameTextField: UITextField!
     @IBOutlet weak var eventDescriptionTextField: UITextField!
@@ -66,8 +66,8 @@ class CreateEventViewController: UIViewController {
         if (optimalEventVC is EventViewController) {
             let eventVC = optimalEventVC as! EventViewController
             eventVC.fetchEvents()
-            print(dateString)
-            eventVC.setSelectedDate(dateString: dateString)
+            print(dateString!)
+            eventVC.setSelectedDate(dateString: dateString!)
             eventVC.calendar.reloadData()
         } else {
             print("failed to cast")
