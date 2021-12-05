@@ -61,11 +61,10 @@ class CreateEventViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        let optimalEventVC = presentingViewController?.children[2].children[0]
+        let optimalEventVC = presentingViewController?.children[1].children[0]
         if (optimalEventVC is EventViewController) {
             let eventVC = optimalEventVC as! EventViewController
             eventVC.fetchEvents()
-            print(dateString)
             eventVC.setSelectedDate(dateString: dateString)
             eventVC.calendar.reloadData()
         } else {
