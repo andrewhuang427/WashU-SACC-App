@@ -23,8 +23,7 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
     
     var events: [Event] = []
     var dateToEvents: [String: [Event]] = [:]
-    
-    var todaysEvents: [Event] = []
+    var tableEvents: [Event] = []
 
     fileprivate lazy var formatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -32,12 +31,6 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
         return formatter
     }()
     
-//    @IBAction func pushCreateEventView(_ sender: UIButton) {
-//        let createEventViewController = CreateEventViewController()
-//        navigationController?.pushViewController(createEventViewController, animated: true)
-//    }
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.dataSource = self
@@ -45,27 +38,30 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
         tableView.dataSource = self
         tableView.delegate = self
         fetchEvents()
-        setSeletedDateAndTodaysEvents()
+        let today = calendar.today
+        let todaysDateAsString = formatter.string(from: today ?? Date())
+        setSelectedDate(dateString: todaysDateAsString)
     }
     
-    func setSeletedDateAndTodaysEvents(){
-        let today = calendar.today
-        selectedDate = formatter.string(from: today ?? Date())
+    func setSelectedDate(dateString: String){
+        selectedDate = dateString
         if (dateToEvents[selectedDate] != nil){
-            todaysEvents = dateToEvents[selectedDate] ?? []
+            tableEvents = dateToEvents[selectedDate] ?? []
         } else {
-            todaysEvents = []
+            tableEvents = []
         }
         tableView.reloadData()
     }
     
     
     func fetchEvents(){
+        print("fetching events")
         let url = URL(string: "https://washu-sacc-app-api.herokuapp.com/events")
         let data = try! Data(contentsOf: url!)
         let response = try! JSONDecoder().decode([Event].self, from: data)
         /// Store events in map, mapping date string to array of events
         events = response
+        dateToEvents = [:]
         for event in events {
             let dateString = String(event.date?.split(separator: "T")[0] ?? "No date")
             if (dateToEvents[dateString] != nil){
@@ -82,9 +78,9 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
         let dateString = formatter.string(from: date)
         selectedDate = dateString
         if (dateToEvents[dateString] != nil){
-            todaysEvents = dateToEvents[dateString] ?? []
+            tableEvents = dateToEvents[dateString] ?? []
         } else {
-            todaysEvents = []
+            tableEvents = []
         }
         tableView.reloadData()
     }
@@ -99,20 +95,21 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        todaysEvents.count
+        tableEvents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let c = UITableViewCell(style: .subtitle, reuseIdentifier: "eventCell")
-        c.textLabel!.text = todaysEvents[indexPath.row].name
-        c.detailTextLabel?.text = todaysEvents[indexPath.row].time
+        c.textLabel!.text = tableEvents[indexPath.row].name
+        c.detailTextLabel?.text = tableEvents[indexPath.row].time
         return c
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print(segue.destination)
         if (segue.destination is CreateEventViewController){
             let vc = segue.destination as! CreateEventViewController
-            vc.dateString = "Create event for \(selectedDate!)"
+            vc.dateString = selectedDate!
         }
     }
 }
