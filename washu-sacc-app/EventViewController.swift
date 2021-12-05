@@ -10,6 +10,7 @@ import UIKit
 
 class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDataSource, UITableViewDelegate {
     
+    var selectedDate: String!
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,6 +37,7 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
 //        navigationController?.pushViewController(createEventViewController, animated: true)
 //    }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.dataSource = self
@@ -43,7 +45,20 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
         tableView.dataSource = self
         tableView.delegate = self
         fetchEvents()
+        setSeletedDateAndTodaysEvents()
     }
+    
+    func setSeletedDateAndTodaysEvents(){
+        let today = calendar.today
+        selectedDate = formatter.string(from: today ?? Date())
+        if (dateToEvents[selectedDate] != nil){
+            todaysEvents = dateToEvents[selectedDate] ?? []
+        } else {
+            todaysEvents = []
+        }
+        tableView.reloadData()
+    }
+    
     
     func fetchEvents(){
         let url = URL(string: "https://washu-sacc-app-api.herokuapp.com/events")
@@ -65,6 +80,7 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         let dateString = formatter.string(from: date)
+        selectedDate = dateString
         if (dateToEvents[dateString] != nil){
             todaysEvents = dateToEvents[dateString] ?? []
         } else {
@@ -87,10 +103,16 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let c = UITableViewCell(style: .subtitle, reuseIdentifier: "newsCell")
+        let c = UITableViewCell(style: .subtitle, reuseIdentifier: "eventCell")
         c.textLabel!.text = todaysEvents[indexPath.row].name
         c.detailTextLabel?.text = todaysEvents[indexPath.row].time
         return c
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.destination is CreateEventViewController){
+            let vc = segue.destination as! CreateEventViewController
+            vc.dateString = "Create event for \(selectedDate!)"
+        }
+    }
 }
