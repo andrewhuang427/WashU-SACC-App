@@ -65,12 +65,9 @@ class CreateEventViewController: UIViewController {
         if (optimalEventVC is EventViewController) {
             let eventVC = optimalEventVC as! EventViewController
             eventVC.fetchEvents()
-<<<<<<< HEAD
             print(dateString!)
             eventVC.setSelectedDate(dateString: dateString!)
-=======
-            eventVC.setSelectedDate(dateString: dateString)
->>>>>>> f2cbc78c767af9b4f7bec5d4ff2bcffef32f074e
+            eventVC.setSelectedDate(dateString: dateString!)
             eventVC.calendar.reloadData()
         } else {
             print("failed to cast")
