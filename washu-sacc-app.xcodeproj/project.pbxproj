@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		284FBF6E1415A02D201929EA /* Pods_washu_sacc_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397A061067E09D87C478B8FA /* Pods_washu_sacc_appTests.framework */; };
 		5F5287BB9DDE1E81C633B04E /* Pods_washu_sacc_app_washu_sacc_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E962AB835EDB1CA3CA32EDB /* Pods_washu_sacc_app_washu_sacc_appUITests.framework */; };
+		9168844C275C476C00D46B58 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9168844B275C476C00D46B58 /* CreateEventViewController.swift */; };
 		91734CE9273EF4E20084BA0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734CE8273EF4E20084BA0B /* AppDelegate.swift */; };
 		91734CEB273EF4E20084BA0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734CEA273EF4E20084BA0B /* SceneDelegate.swift */; };
 		91734CF0273EF4E20084BA0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91734CEE273EF4E20084BA0B /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		397A061067E09D87C478B8FA /* Pods_washu_sacc_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_washu_sacc_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4153BD42D1D616D37C6E4897 /* Pods-washu-sacc-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-washu-sacc-app.release.xcconfig"; path = "Target Support Files/Pods-washu-sacc-app/Pods-washu-sacc-app.release.xcconfig"; sourceTree = "<group>"; };
 		71E60E407031F9E8F9CC823C /* Pods-washu-sacc-app-washu-sacc-appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-washu-sacc-app-washu-sacc-appUITests.debug.xcconfig"; path = "Target Support Files/Pods-washu-sacc-app-washu-sacc-appUITests/Pods-washu-sacc-app-washu-sacc-appUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9168844B275C476C00D46B58 /* CreateEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
 		91734CE5273EF4E20084BA0B /* washu-sacc-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "washu-sacc-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91734CE8273EF4E20084BA0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91734CEA273EF4E20084BA0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				91734CE8273EF4E20084BA0B /* AppDelegate.swift */,
 				91734CEA273EF4E20084BA0B /* SceneDelegate.swift */,
 				91734CEE273EF4E20084BA0B /* Main.storyboard */,
+				9168844B275C476C00D46B58 /* CreateEventViewController.swift */,
 				D5922A842742E9A80097133E /* EventViewController.swift */,
 				D5922A862742E9B90097133E /* NewsViewController.swift */,
 				D5922A882742E9D10097133E /* ResourcesViewController.swift */,
@@ -418,6 +421,7 @@
 				D5922A852742E9A80097133E /* EventViewController.swift in Sources */,
 				D5922A8B2742E9DD0097133E /* TeamViewController.swift in Sources */,
 				91734CE9273EF4E20084BA0B /* AppDelegate.swift in Sources */,
+				9168844C275C476C00D46B58 /* CreateEventViewController.swift in Sources */,
 				D5922A892742E9D10097133E /* ResourcesViewController.swift in Sources */,
 				D5922A872742E9B90097133E /* NewsViewController.swift in Sources */,
 				91734CEB273EF4E20084BA0B /* SceneDelegate.swift in Sources */,

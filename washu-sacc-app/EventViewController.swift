@@ -31,6 +31,11 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
         return formatter
     }()
     
+//    @IBAction func pushCreateEventView(_ sender: UIButton) {
+//        let createEventViewController = CreateEventViewController()
+//        navigationController?.pushViewController(createEventViewController, animated: true)
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         calendar.dataSource = self
@@ -82,8 +87,9 @@ class EventViewController: UIViewController, FSCalendarDelegate, FSCalendarDataS
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let c = UITableViewCell(style: .default, reuseIdentifier: "newsCell")
+        let c = UITableViewCell(style: .subtitle, reuseIdentifier: "newsCell")
         c.textLabel!.text = todaysEvents[indexPath.row].name
+        c.detailTextLabel?.text = todaysEvents[indexPath.row].time
         return c
     }
     
