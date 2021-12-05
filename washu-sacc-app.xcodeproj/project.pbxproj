@@ -17,6 +17,8 @@
 		91734D00273EF4E50084BA0B /* washu_sacc_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734CFF273EF4E50084BA0B /* washu_sacc_appTests.swift */; };
 		91734D0B273EF4E50084BA0B /* washu_sacc_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91734D0A273EF4E50084BA0B /* washu_sacc_appUITests.swift */; };
 		9A8D9641BDE076BB22D79E5A /* Pods_washu_sacc_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2352B4FF93E0F7BC81BB42DF /* Pods_washu_sacc_app.framework */; };
+		D57B9411275C2BA500EF6B50 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57B9410275C2BA500EF6B50 /* RosterViewController.swift */; };
+		D57B9413275C371300EF6B50 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57B9412275C371300EF6B50 /* PlayerDetailViewController.swift */; };
 		D5922A852742E9A80097133E /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5922A842742E9A80097133E /* EventViewController.swift */; };
 		D5922A872742E9B90097133E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5922A862742E9B90097133E /* NewsViewController.swift */; };
 		D5922A892742E9D10097133E /* ResourcesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5922A882742E9D10097133E /* ResourcesViewController.swift */; };
@@ -61,6 +63,8 @@
 		91734D0C273EF4E50084BA0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7C70218731B25938A9284B3 /* Pods-washu-sacc-app-washu-sacc-appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-washu-sacc-app-washu-sacc-appUITests.release.xcconfig"; path = "Target Support Files/Pods-washu-sacc-app-washu-sacc-appUITests/Pods-washu-sacc-app-washu-sacc-appUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CB02A7B7990EACD90E2B90E3 /* Pods-washu-sacc-appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-washu-sacc-appTests.release.xcconfig"; path = "Target Support Files/Pods-washu-sacc-appTests/Pods-washu-sacc-appTests.release.xcconfig"; sourceTree = "<group>"; };
+		D57B9410275C2BA500EF6B50 /* RosterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
+		D57B9412275C371300EF6B50 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
 		D5922A842742E9A80097133E /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		D5922A862742E9B90097133E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		D5922A882742E9D10097133E /* ResourcesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 				D5922A862742E9B90097133E /* NewsViewController.swift */,
 				D5922A882742E9D10097133E /* ResourcesViewController.swift */,
 				D5922A8A2742E9DD0097133E /* TeamViewController.swift */,
+				D57B9410275C2BA500EF6B50 /* RosterViewController.swift */,
+				D57B9412275C371300EF6B50 /* PlayerDetailViewController.swift */,
 				91734CF1273EF4E50084BA0B /* Assets.xcassets */,
 				91734CF3273EF4E50084BA0B /* LaunchScreen.storyboard */,
 				91734CF6273EF4E50084BA0B /* Info.plist */,
@@ -419,8 +425,10 @@
 				D5922A8B2742E9DD0097133E /* TeamViewController.swift in Sources */,
 				91734CE9273EF4E20084BA0B /* AppDelegate.swift in Sources */,
 				D5922A892742E9D10097133E /* ResourcesViewController.swift in Sources */,
+				D57B9413275C371300EF6B50 /* PlayerDetailViewController.swift in Sources */,
 				D5922A872742E9B90097133E /* NewsViewController.swift in Sources */,
 				91734CEB273EF4E20084BA0B /* SceneDelegate.swift in Sources */,
+				D57B9411275C2BA500EF6B50 /* RosterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
