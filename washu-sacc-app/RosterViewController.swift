@@ -99,28 +99,28 @@ class RosterViewController: UIViewController , UITableViewDataSource, UITableVie
                 let response = try! JSONDecoder().decode([Player].self, from: theData!)
                 print(response)
                 thePlayers = response
-//                if apiTeam?[2] == "0"{
-//                    if apiTeam?[1] == "swimdive"{
-//                        thePlayers = Array(response[..<34])
-//                    }
-//                    if apiTeam?[1] == "xc"{
-//                        thePlayers = Array(response[..<39])
-//                    }
-//                    if apiTeam?[1] == "track"{
-//                        thePlayers = Array(response[..<80])
-//                    }
-//                }
-//                else{
-//                    if apiTeam?[1] == "swimdive"{
-//                        thePlayers = Array(response[34...])
-//                    }
-//                    if apiTeam?[1] == "xc"{
-//                        thePlayers = Array(response[39...])
-//                    }
-//                    if apiTeam?[1] == "track"{
-//                        thePlayers = Array(response[80...])
-//                    }
-//                }
+                if apiTeam?[2] == "0"{
+                    if apiTeam?[1] == "swimdive"{
+                        thePlayers = Array(response[..<34])
+                    }
+                    if apiTeam?[1] == "xc"{
+                        thePlayers = Array(response[..<39])
+                    }
+                    if apiTeam?[1] == "track"{
+                        thePlayers = Array(response[..<80])
+                    }
+                }
+                else{
+                    if apiTeam?[1] == "swimdive"{
+                        thePlayers = Array(response[34...])
+                    }
+                    if apiTeam?[1] == "xc"{
+                        thePlayers = Array(response[39...])
+                    }
+                    if apiTeam?[1] == "track"{
+                        thePlayers = Array(response[80...])
+                    }
+                }
             }
         }
     }
