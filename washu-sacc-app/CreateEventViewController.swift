@@ -23,7 +23,6 @@ class CreateEventViewController: UIViewController {
     
     @IBAction func createEvent(_ sender: UIButton) {
         let url = URL(string: "https://washu-sacc-app-api.herokuapp.com/events")!
-        
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
@@ -62,12 +61,16 @@ class CreateEventViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        let optimalEventVC = presentingViewController?.children[2].children[0]
+        let optimalEventVC = presentingViewController?.children[1].children[0]
         if (optimalEventVC is EventViewController) {
             let eventVC = optimalEventVC as! EventViewController
             eventVC.fetchEvents()
+<<<<<<< HEAD
             print(dateString!)
             eventVC.setSelectedDate(dateString: dateString!)
+=======
+            eventVC.setSelectedDate(dateString: dateString)
+>>>>>>> f2cbc78c767af9b4f7bec5d4ff2bcffef32f074e
             eventVC.calendar.reloadData()
         } else {
             print("failed to cast")

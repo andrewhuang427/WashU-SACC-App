@@ -9,12 +9,6 @@ import UIKit
 
 class ResourcesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    //need to connect to resources button on main view controller
-    //right now have just temporarily set this as default view controller
-    
-    
-    //can probably put this data somewhere better but it works for now
-    //need to get links for event sign up, ats, alumni db, nutritionist
     var resources_arr = ["CareerLink",
                          "TeamBuildr download",
                          "Event sign-Up",
@@ -24,14 +18,13 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
                          "Nutritionist Appointments",
                          "RSVP Center"]
 
-    //teambuildr link not working
     var links_arr = ["https://wustl-csm.symplicity.com/students/index.php?s=home",
-                     "https://apps.apple.com/us/app/teambuildr/id1148960445",
-                     "http://google.com",
+                     "https://www.teambuildr.com/en/?utm_term=teambuildr&utm_campaign=Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=5368532431&hsa_cam=856468734&hsa_grp=44323215555&hsa_ad=526485359171&hsa_src=g&hsa_tgt=kwd-342081506345&hsa_kw=teambuildr&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQiA47GNBhDrARIsAKfZ2rAFRVive2LIkHZ5w7aM-TToi_At6EtNKDZrjq9QSyli1x8fGqN5FBoaAssoEALw_wcB",
+                     "https://docs.google.com/spreadsheets/d/1r-g2RZ3yAZMCDdm2wPyP0BqmtWBr8cioepwtquWTk6o/edit#gid=534087976",
                      "https://www.atsusers.com",
                      "https://www.linkedin.com/groups/12043062",
                      "https://washubears.com",
-                     "https://google.com",
+                     "https://students.wustl.edu/medical-health-care-appointments/",
                      "https://students.wustl.edu/relationship-sexual-violence-prevention-center/"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,16 +54,4 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
         tableview.delegate = self
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

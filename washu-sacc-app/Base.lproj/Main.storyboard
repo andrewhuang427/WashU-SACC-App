@@ -127,26 +127,41 @@
             <objects>
                 <viewController id="dQo-jG-MGo" customClass="EventViewController" customModule="washu_sacc_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Gi-jL-391">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8O-0Z-NmT" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="88" width="390" height="275"/>
+                                <rect key="frame" x="0.0" y="166" width="390" height="257"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="275" id="C96-Ra-W4L"/>
-                                </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5K5-9T-Tsk">
-                                <rect key="frame" x="0.0" y="424" width="390" height="337"/>
+                                <rect key="frame" x="0.0" y="473" width="390" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="AFe-rc-ZJG"/>
+                                </constraints>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2J-cJ-CYc">
-                                <rect key="frame" x="0.0" y="363" width="390" height="61"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAL-2M-m9X">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llw-jm-vDu">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="washu-saac" translatesAutoresizingMaskIntoConstraints="NO" id="pGw-oF-zFV">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="150"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="pGw-oF-zFV" firstAttribute="leading" secondItem="KAL-2M-m9X" secondAttribute="leading" id="CRz-o4-d4O"/>
+                                    <constraint firstAttribute="height" constant="150" id="iby-P9-Z3J"/>
+                                    <constraint firstAttribute="bottom" secondItem="pGw-oF-zFV" secondAttribute="bottom" id="nfQ-jd-mht"/>
+                                    <constraint firstItem="pGw-oF-zFV" firstAttribute="top" secondItem="KAL-2M-m9X" secondAttribute="top" id="yhS-oX-vmg"/>
+                                    <constraint firstAttribute="trailing" secondItem="pGw-oF-zFV" secondAttribute="trailing" id="ymY-SI-mJX"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2J-cJ-CYc">
+                                <rect key="frame" x="0.0" y="423" width="390" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llw-jm-vDu">
                                         <rect key="frame" x="134" y="15" width="123" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Create New Event"/>
                                         <connections>
                                             <segue destination="P4r-YF-tql" kind="presentation" id="EcB-3Z-uZP"/>
@@ -155,23 +170,28 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="8be-9d-A2l"/>
+                                    <constraint firstItem="llw-jm-vDu" firstAttribute="centerX" secondItem="X2J-cJ-CYc" secondAttribute="centerX" id="7Dc-cC-6lw"/>
+                                    <constraint firstItem="llw-jm-vDu" firstAttribute="centerY" secondItem="X2J-cJ-CYc" secondAttribute="centerY" id="hHr-aB-3ZD"/>
+                                    <constraint firstAttribute="height" constant="50" id="p4v-U1-AGQ"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wcv-id-876"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5K5-9T-Tsk" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="3Gl-f0-vIt"/>
-                            <constraint firstItem="5K5-9T-Tsk" firstAttribute="top" secondItem="X2J-cJ-CYc" secondAttribute="bottom" id="IFl-tp-lvW"/>
-                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="5K5-9T-Tsk" secondAttribute="trailing" id="OP8-mW-eeT"/>
-                            <constraint firstItem="X2J-cJ-CYc" firstAttribute="top" secondItem="w8O-0Z-NmT" secondAttribute="bottom" id="RJF-WE-8UR"/>
-                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="w8O-0Z-NmT" secondAttribute="trailing" id="TFM-MP-K0Z"/>
-                            <constraint firstItem="w8O-0Z-NmT" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="UQp-Ot-gEx"/>
-                            <constraint firstItem="w8O-0Z-NmT" firstAttribute="top" secondItem="Wcv-id-876" secondAttribute="top" id="Ydt-NN-qxZ"/>
-                            <constraint firstItem="X2J-cJ-CYc" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="esz-SJ-bt7"/>
-                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="X2J-cJ-CYc" secondAttribute="trailing" id="nV1-y1-oVl"/>
-                            <constraint firstItem="Wcv-id-876" firstAttribute="bottom" secondItem="5K5-9T-Tsk" secondAttribute="bottom" id="yUW-Ws-por"/>
+                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="5K5-9T-Tsk" secondAttribute="trailing" id="524-7S-fQY"/>
+                            <constraint firstItem="Wcv-id-876" firstAttribute="bottom" secondItem="5K5-9T-Tsk" secondAttribute="bottom" id="D5d-JJ-Uwh"/>
+                            <constraint firstItem="X2J-cJ-CYc" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="EDk-nw-B5N"/>
+                            <constraint firstItem="5K5-9T-Tsk" firstAttribute="top" secondItem="X2J-cJ-CYc" secondAttribute="bottom" id="EzR-nA-kfv"/>
+                            <constraint firstItem="5K5-9T-Tsk" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="M3G-vv-tUg"/>
+                            <constraint firstItem="X2J-cJ-CYc" firstAttribute="top" secondItem="w8O-0Z-NmT" secondAttribute="bottom" id="Pj4-Q0-LBb"/>
+                            <constraint firstItem="KAL-2M-m9X" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="ZXa-CR-EEN"/>
+                            <constraint firstItem="w8O-0Z-NmT" firstAttribute="leading" secondItem="Wcv-id-876" secondAttribute="leading" id="aad-BD-y65"/>
+                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="X2J-cJ-CYc" secondAttribute="trailing" id="g2x-cI-3XO"/>
+                            <constraint firstItem="KAL-2M-m9X" firstAttribute="top" secondItem="Wcv-id-876" secondAttribute="top" id="mfd-LB-uih"/>
+                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="w8O-0Z-NmT" secondAttribute="trailing" id="nhf-Z2-p9r"/>
+                            <constraint firstItem="Wcv-id-876" firstAttribute="trailing" secondItem="KAL-2M-m9X" secondAttribute="trailing" id="nzP-b6-fHK"/>
+                            <constraint firstItem="w8O-0Z-NmT" firstAttribute="top" secondItem="KAL-2M-m9X" secondAttribute="bottom" constant="16" id="psB-Ar-0yo"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" image="events" selectedImage="events" id="Ii5-gC-MYY"/>
@@ -183,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FEq-bO-Y6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3322" y="1901"/>
+            <point key="canvasLocation" x="-3323.0769230769229" y="1900.9478672985781"/>
         </scene>
         <!--Events-->
         <scene sceneID="aTH-iA-GVo">
@@ -191,7 +211,8 @@
                 <navigationController id="n0X-Bp-p22" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Events" image="events" selectedImage="events" id="JqU-U0-fWS"/>
                     <navigationItem key="navigationItem" id="FQE-Jg-jxe"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bUx-lC-V7V">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="bUx-lC-V7V">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
