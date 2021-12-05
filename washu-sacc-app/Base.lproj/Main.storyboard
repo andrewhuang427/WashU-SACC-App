@@ -367,13 +367,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="1pO-DS-WLa" kind="relationship" relationship="viewControllers" id="W1m-8S-5zq"/>
-<<<<<<< HEAD
                         <segue destination="wvm-ke-jpP" kind="relationship" relationship="viewControllers" id="WSI-53-cvM"/>
                         <segue destination="n0X-Bp-p22" kind="relationship" relationship="viewControllers" id="br8-e1-1Ef"/>
-=======
-                        <segue destination="dQo-jG-MGo" kind="relationship" relationship="viewControllers" id="4p9-U2-24E"/>
-                        <segue destination="s3p-Jo-Nmx" kind="relationship" relationship="viewControllers" id="2ZO-HO-fON"/>
->>>>>>> 685779af55b485cfa28926e2e5392f17ba007681
                         <segue destination="9D3-oO-aP0" kind="relationship" relationship="viewControllers" id="dz1-Jd-CIR"/>
                     </connections>
                 </tabBarController>
