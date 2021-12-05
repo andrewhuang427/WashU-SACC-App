@@ -11,20 +11,18 @@ import SafariServices
 
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    
     @IBOutlet weak var newsTable: UITableView!
     
     var news: [News] = []
     
     private var showSafari: Bool = false
     
-    struct News: Decodable{
+    struct News: Decodable {
         var title: String?
         var link: String?
         var team_abbreviation: String?
         var image_url: String?
         var date_posted: String?
-        
     }
 
     override func viewDidLoad() {

@@ -12,7 +12,6 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
     //need to connect to resources button on main view controller
     //right now have just temporarily set this as default view controller
     
-    
     //can probably put this data somewhere better but it works for now
     //need to get links for event sign up, ats, alumni db, nutritionist
     var resources_arr = ["CareerLink",

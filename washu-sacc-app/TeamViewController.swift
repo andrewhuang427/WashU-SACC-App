@@ -9,8 +9,6 @@ import UIKit
 
 class TeamViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         theTableView.delegate = self
@@ -26,7 +24,6 @@ class TeamViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var genderSelected: String = "male" // keeps track of what gender we have selected with the segmented control
     
     @IBOutlet weak var theTableView: UITableView!
-    
     
     @IBAction func genderSelectMethod(_ sender: UISegmentedControl) {
         print(sender.selectedSegmentIndex)
@@ -98,7 +95,6 @@ class TeamViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
-
     /*
     // MARK: - Navigation
 

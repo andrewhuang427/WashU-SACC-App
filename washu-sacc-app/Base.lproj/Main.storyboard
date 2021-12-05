@@ -249,9 +249,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cn3-zV-tb2">
-                                <rect key="frame" x="0.0" y="238" width="390" height="560"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cn3-zV-tb2">
+                                <rect key="frame" x="0.0" y="222" width="390" height="576"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myIndentifier" id="JqU-dJ-VTD">
@@ -267,9 +266,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X9H-ty-2ob">
-                                <rect key="frame" x="0.0" y="199" width="390" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="washu-saac" translatesAutoresizingMaskIntoConstraints="NO" id="YMz-cj-3zd">
+                                <rect key="frame" x="0.0" y="88" width="390" height="103"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X9H-ty-2ob">
+                                <rect key="frame" x="0.0" y="191" width="390" height="32"/>
                                 <segments>
                                     <segment title="Mens"/>
                                     <segment title="Womens"/>
@@ -281,6 +283,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7HH-a5-J26"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cn3-zV-tb2" firstAttribute="leading" secondItem="YMz-cj-3zd" secondAttribute="leading" id="5zd-qQ-6vl"/>
+                            <constraint firstItem="cn3-zV-tb2" firstAttribute="trailing" secondItem="YMz-cj-3zd" secondAttribute="trailing" id="87b-S6-eQP"/>
+                            <constraint firstItem="YMz-cj-3zd" firstAttribute="leading" secondItem="7HH-a5-J26" secondAttribute="leading" id="Fxs-38-Ndc"/>
+                            <constraint firstItem="X9H-ty-2ob" firstAttribute="top" secondItem="YMz-cj-3zd" secondAttribute="bottom" id="Kce-Zf-plp"/>
+                            <constraint firstItem="cn3-zV-tb2" firstAttribute="top" secondItem="X9H-ty-2ob" secondAttribute="bottom" id="SyJ-g8-guJ"/>
+                            <constraint firstItem="YMz-cj-3zd" firstAttribute="top" secondItem="7HH-a5-J26" secondAttribute="top" id="VC4-1E-KQF"/>
+                            <constraint firstItem="cn3-zV-tb2" firstAttribute="trailing" secondItem="X9H-ty-2ob" secondAttribute="trailing" id="VfN-wc-m1w"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cn3-zV-tb2" secondAttribute="bottom" constant="-37" id="ZJW-Fp-qRF"/>
+                            <constraint firstItem="YMz-cj-3zd" firstAttribute="trailing" secondItem="7HH-a5-J26" secondAttribute="trailing" id="pHe-JK-F6H"/>
+                            <constraint firstItem="cn3-zV-tb2" firstAttribute="leading" secondItem="X9H-ty-2ob" secondAttribute="leading" id="x8e-eA-GdE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Teams" image="team" selectedImage="team" id="fXl-Ee-I8M"/>
                     <navigationItem key="navigationItem" id="7un-mf-XzG"/>
@@ -290,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zD4-5O-cQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-245" y="1901"/>
+            <point key="canvasLocation" x="-246.15384615384613" y="1900.9478672985781"/>
         </scene>
         <!--Roster View Controller-->
         <scene sceneID="pbu-WV-OPj">

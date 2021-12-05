@@ -9,7 +9,6 @@ import UIKit
 
 class CreateEventViewController: UIViewController {
 
-    
     var dateString: String!
     @IBOutlet weak var eventTextLabel: UILabel!
     @IBOutlet weak var eventNameTextField: UITextField!
