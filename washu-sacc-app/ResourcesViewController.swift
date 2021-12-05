@@ -9,6 +9,7 @@ import UIKit
 
 class ResourcesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //data for resource table cells
     var resources_arr = ["CareerLink",
                          "TeamBuildr download",
                          "Event sign-Up",
@@ -27,6 +28,7 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
                      "https://students.wustl.edu/medical-health-care-appointments/",
                      "https://students.wustl.edu/relationship-sexual-violence-prevention-center/"]
     
+    //methods to set up the tableview
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resources_arr.count
     }
@@ -37,8 +39,8 @@ class ResourcesViewController: UIViewController, UITableViewDataSource, UITableV
         return myCell
     }
     
+    //method to open link to resource when cell is clicked 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected row at \(indexPath.row)")
         if let url = URL(string: links_arr[indexPath.row]) {
             UIApplication.shared.open(url, completionHandler: nil)
         }
