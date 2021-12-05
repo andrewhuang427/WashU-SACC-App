@@ -41,6 +41,7 @@ class RosterViewController: UIViewController , UITableViewDataSource, UITableVie
             title = "Women's \(apiTeam?[0] ?? "No Team Entered")"
         }
         fetchMethod()
+        myTable.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -52,8 +53,21 @@ class RosterViewController: UIViewController , UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let myCell = UITableViewCell(style: .default, reuseIdentifier: "myIdentifier")
-        myCell.textLabel!.text = (thePlayers[indexPath.row].first_name ?? "") + " " +  (thePlayers[indexPath.row].last_name ?? "")
+        let myCell = UITableViewCell(style: .subtitle, reuseIdentifier: "rosterCell")
+        let labelText = (thePlayers[indexPath.row].first_name! ) + " " + (thePlayers[indexPath.row].last_name! )
+        var subtitleText = ""
+   
+        if (thePlayers[indexPath.row].number != nil){
+            subtitleText += "Number: " + thePlayers[indexPath.row].number! + " | "
+        }
+        
+        if (thePlayers[indexPath.row].hometown != nil) {
+            subtitleText += "Hometown: " + thePlayers[indexPath.row].hometown!
+        }
+    
+        print(labelText)
+        myCell.textLabel!.text = labelText
+        myCell.detailTextLabel!.text = subtitleText
         return myCell
     }
     
@@ -76,34 +90,37 @@ class RosterViewController: UIViewController , UITableViewDataSource, UITableVie
     }
     
     func fetchMethod(){
-        let url: String = "https://washu-sacc-app-api.herokuapp.com/athletes?team=\(apiTeam?[1] ?? "")"
+        let url: String = "https://washu-sacc-app-api.herokuapp.com/athletes?team=\(apiTeam![1])"
+        print(url)
         let newURL = URL(string: url)
         if newURL != nil {
             let theData = try? Data(contentsOf: newURL!)
             if theData != nil{
                 let response = try! JSONDecoder().decode([Player].self, from: theData!)
-                if apiTeam?[2] == "0"{
-                    if apiTeam?[1] == "swimdive"{
-                        thePlayers = Array(response[..<34])
-                    }
-                    if apiTeam?[1] == "xc"{
-                        thePlayers = Array(response[..<39])
-                    }
-                    if apiTeam?[1] == "track"{
-                        thePlayers = Array(response[..<80])
-                    }
-                }
-                else{
-                    if apiTeam?[1] == "swimdive"{
-                        thePlayers = Array(response[34...])
-                    }
-                    if apiTeam?[1] == "xc"{
-                        thePlayers = Array(response[39...])
-                    }
-                    if apiTeam?[1] == "track"{
-                        thePlayers = Array(response[80...])
-                    }
-                }
+                print(response)
+                thePlayers = response
+//                if apiTeam?[2] == "0"{
+//                    if apiTeam?[1] == "swimdive"{
+//                        thePlayers = Array(response[..<34])
+//                    }
+//                    if apiTeam?[1] == "xc"{
+//                        thePlayers = Array(response[..<39])
+//                    }
+//                    if apiTeam?[1] == "track"{
+//                        thePlayers = Array(response[..<80])
+//                    }
+//                }
+//                else{
+//                    if apiTeam?[1] == "swimdive"{
+//                        thePlayers = Array(response[34...])
+//                    }
+//                    if apiTeam?[1] == "xc"{
+//                        thePlayers = Array(response[39...])
+//                    }
+//                    if apiTeam?[1] == "track"{
+//                        thePlayers = Array(response[80...])
+//                    }
+//                }
             }
         }
     }
