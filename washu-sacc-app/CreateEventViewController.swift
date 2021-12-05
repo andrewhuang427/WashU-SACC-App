@@ -23,7 +23,6 @@ class CreateEventViewController: UIViewController {
     
     @IBAction func createEvent(_ sender: UIButton) {
         let url = URL(string: "https://washu-sacc-app-api.herokuapp.com/events")!
-        
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
